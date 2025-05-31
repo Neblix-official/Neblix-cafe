@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="موقع إلكتروني احترافي يعكس ذوقك – خلال 3 أيام فقط! متوافق مع الجوال، سريع التحميل، ويظهر في جوجل." />
+  <meta name="keywords" content="تصميم مواقع كافيهات, موقع كافيه, منيو أونلاين, Neblix, تصميم ويب احترافي, مواقع مطاعم" />
+  <title>خلي كافيهك يلمع أونلاين ☕ - Neblix لتصميم مواقع الكافيهات</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --color-primary-light: #f7f3ff; /* لون خفيف أكثر احترافية */
+      --color-primary-dark: #2c1a4d; /* بنفسجي داكن أكثر أناقة */
+      --color-accent-light: #7c4dff; /* لون مميز أكثر احترافية */
+      --color-accent-dark: #5e35b1; /* لون داكن للتمييز */
+      --color-text-dark: #1a1a1a; /* أسود أكثر احترافية */
+      --color-text-light: #4a4a4a; /* رمادي متوسط */
+      --color-highlight: #ff4081; /* لون مميز للعروض */
+      --color-gradient-start: #6a43ff; /* بداية التدرج اللوني */
+      --color-gradient-end: #a17fff; /* نهاية التدرج اللوني */
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      background-color: #fafafa;
+      color: var(--color-text-dark);
+    }
+
+    .bg-primary-light { background-color: var(--color-primary-light); }
+    .bg-primary-dark { background-color: var(--color-primary-dark); }
+    .text-primary-dark { color: var(--color-primary-dark); }
+    .bg-accent-light { background-color: var(--color-accent-light); }
+    .hover\:bg-accent-dark:hover { background-color: var(--color-accent-dark); }
+    .text-accent-light { color: var(--color-accent-light); }
+    .text-highlight { color: var(--color-highlight); }
+    .border-primary-light { border-color: var(--color-primary-light); }
+    .border-accent-light { border-color: var(--color-accent-light); }
+    
+    /* تدرج لوني أكثر احترافية */
+    .gradient-bg {
+      background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* تحسين الظلال */
+    .elegant-shadow {
+      box-shadow: 0 10px 30px rgba(58, 43, 82, 0.1);
+    }
+    
+    .card-shadow {
+      box-shadow: 0 5px 15px rgba(58, 43, 82, 0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .card-shadow:hover {
+      box-shadow: 0 15px 30px rgba(58, 43, 82, 0.15);
+      transform: translateY(-5px);
+    }
+
+    /* تحسين الزوايا */
+    .rounded-elegant {
+      border-radius: 16px;
+    }
+
+    /* تحسين التصميم للعناصر */
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(124, 77, 255, 0.1);
+      border-radius: 16px;
+      margin-bottom: 20px;
+      color: var(--color-accent-light);
+      font-size: 24px;
+    }
+    
+    /* تأثيرات الكروت */
+    .card-hover-effect {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .card-hover-effect:hover {
+      transform: translateY(-8px);
+    }
+
+    /* تحسين التصميم للقوائم */
+    .nav-link {
+      position: relative;
+      padding-bottom: 5px;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-accent-light);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* تحسين التصميم للأزرار */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+      color: white;
+      border: none;
+      font-weight: 700;
+      padding: 15px 35px;
+      border-radius: 50px;
+      box-shadow: 0 10px 20px rgba(124, 77, 255, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px rgba(124, 77, 255, 0.4);
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+    
+    .btn-primary:hover::before {
+      transform: translateX(100%);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--color-accent-light);
+      border: 2px solid var(--color-accent-light);
+      font-weight: 700;
+      padding: 12px 30px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: var(--color-accent-light);
+      color: white;
+    }
+
+    /* تحسين التصميم للعناوين */
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+      border-radius: 2px;
+    }
+
+    /* تحسين التصميم للفواصل */
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--color-accent-light), transparent);
+      margin: 50px auto;
+      max-width: 200px;
+    }
+
+    /* تحسين التصميم للشهادات */
+    .testimonial-card {
+      position: relative;
+      border-left: 4px solid var(--color-accent-light);
+    }
+    
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: -30px;
+      right: 20px;
+      font-size: 100px;
+      color: rgba(124, 77, 255, 0.1);
+      font-family: serif;
+      line-height: 1;
+    }
+    
+    /* تحسين التصميم للرسوم المتحركة */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-800 { animation-delay: 0.8s; }
+    
+    /* تحسين التصميم للفوتر */
+    footer {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%235e35b1' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+
+    /* تحسين التصميم للشريط العلوي */
+    .sticky-nav {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* تحسين التصميم للهيدر */
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(124, 77, 255, 0.1) 0%, transparent 70%);
+      z-index: 0;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .coffee-icon {
+      position: absolute;
+      opacity: 0.05;
+      font-size: 200px;
+      z-index: 1;
+    }
+    
+    .coffee-icon-1 { top: 10%; right: 10%; }
+    .coffee-icon-2 { bottom: 10%; left: 10%; }
+    
+    /* تحسين التصميم للهواتف */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .section-title::after {
+        width: 60px;
+        bottom: -10px;
+      }
+      
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <header class="sticky-nav sticky top-0 z-50 py-4 px-6 transition-all">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-extrabold text-accent-light flex items-center">
+        <span class="gradient-text">Neblix</span> <span class="ml-2"></span
+      </a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#example" class="nav-link text-gray-700 hover:text-accent-light transition-all-ease font-semibold">مثال مباشر</a>
+        <a href="#offer" class="nav-link text-gray-700 hover:text-accent-light transition-all-ease font-semibold">العرض المحدود</a>
+        <a href="#features" class="nav-link text-gray-700 hover:text-accent-light transition-all-ease font-semibold">المميزات</a>
+        <a href="#testimonials" class="nav-link text-gray-700 hover:text-accent-light transition-all-ease font-semibold">آراء العملاء</a>
+        <a href="#faq" class="nav-link text-gray-700 hover:text-accent-light transition-all-ease font-semibold">أسئلة شائعة</a>
+      </div>
+      <a href="https://wa.me/201010361316" target="_blank" rel="noopener" class="btn-primary text-sm md:text-base">
+        <i class="fab fa-whatsapp ml-2"></i> واتساب
+      </a>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section bg-gradient-to-br from-purple-50 via-primary-light to-purple-100 text-primary-dark py-24 px-6 text-center overflow-hidden">
+    <i class="fas fa-coffee coffee-icon coffee-icon-1"></i>
+    <i class="fas fa-mug-hot coffee-icon coffee-icon-2"></i>
+    
+    <div class="hero-content max-w-4xl mx-auto">
+      <h1 class="hero-title text-4xl md:text-5xl font-extrabold mb-6 leading-tight animate-fade-in-up">
+        خلي كافيهك يلمع <span class="gradient-text">أونلاين</span> ✨
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200 font-semibold text-gray-700">
+        موقع إلكتروني احترافي يعكس ذوقك الفريد – <span class="text-highlight font-bold">خلال 3 أيام فقط!</span>
+      </p>
+      <div class="mb-8 flex flex-wrap justify-center gap-3 animate-fade-in-up delay-400">
+        <span class="bg-white px-5 py-2 rounded-full border border-purple-200 font-medium flex items-center">
+          <i class="fas fa-mobile-alt text-accent-light ml-2"></i> متوافق مع الجوال
+        </span>
+        <span class="bg-white px-5 py-2 rounded-full border border-purple-200 font-medium flex items-center">
+          <i class="fas fa-bolt text-accent-light ml-2"></i> سريع التحميل
+        </span>
+        <span class="bg-white px-5 py-2 rounded-full border border-purple-200 font-medium flex items-center">
+          <i class="fab fa-google text-accent-light ml-2"></i> يظهر في جوجل
+        </span>
+      </div>
+      <p class="mb-10 font-bold text-xl text-gray-700 animate-fade-in-up delay-600">
+        <i class="fas fa-palette text-accent-light mr-2"></i> تصميم عصري يليق بتميز كافيهك
+      </p>
+      <a href="https://wa.me/201010361316" target="_blank" rel="noopener"
+         class="btn-primary text-lg animate-fade-in-up delay-800">
+        <i class="fas fa-calendar-check ml-2"></i> احجز استشارة مجانية الآن
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="example" class="max-w-6xl mx-auto py-20 px-6">
+    <h2 class="section-title text-3xl md:text-4xl font-extrabold text-center text-primary-dark">🎬 مثال مباشر: إلقاء نظرة على تصميمنا</h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center text-right">
+      <div class="rounded-elegant overflow-hidden card-shadow animate-fade-in-up">
+        <div class="relative overflow-hidden rounded-elegant">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+               alt="تصميم موقع كافيه عصري وجذاب"
+               class="w-full h-auto object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute bottom-6 right-6 z-20 text-white">
+            <h3 class="text-2xl font-bold">كافيه السعادة</h3>
+            <p class="text-white/90">تصميم عصري لمقهى متكامل</p>
+          </div>
+        </div>
+      </div>
+      <div class="animate-fade-in-up delay-200">
+        <p class="text-lg leading-relaxed text-gray-700 mb-6">
+          شاهد مثالًا واقعيًا لتصميم موقع كافيه عصري وجذاب يعرض المنيو والصور والطلب أونلاين بطريقة سهلة وسلسة.
+        </p>
+        <p class="text-lg leading-relaxed text-gray-700 mb-8">
+          تصميمنا يتميز بالبساطة، السرعة الفائقة، والتوافق الكامل مع جميع الأجهزة، ليضمن لك وصول عملائك بسهولة وراحة.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://aliemad2004.github.io/Rostoza" target="_blank" rel="noopener" class="btn-primary">
+            <i class="fas fa-eye ml-2"></i> شاهد الموقع الحي
+          </a>
+          <a href="#features" class="btn-secondary">
+            <i class="fas fa-list ml-2"></i> اكتشف المميزات
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offer" class="bg-gradient-to-r from-purple-50 to-primary-light py-20 px-6 text-center overflow-hidden">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="section-title text-3xl md:text-4xl font-extrabold text-center text-primary-dark">🔥 العرض المحدود: لا تفوت الفرصة!</h2>
+      <div class="bg-white rounded-elegant card-shadow p-8 mb-10 relative overflow-hidden">
+        <div class="absolute top-4 left-4 bg-highlight text-white px-4 py-1 rounded-full font-bold text-sm">
+          عرض محدود
+        </div>
+        <p class="text-2xl md:text-3xl mb-8 font-bold text-gray-800">
+          موقع احترافي لكافيهك بـ <span class="text-highlight text-4xl font-extrabold">1000 ريال فقط</span>
+        </p>
+        <ul class="max-w-md mx-auto text-right list-none text-gray-700 space-y-4 text-lg">
+          <li class="flex items-center justify-end">
+            <div class="w-8 h-8 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light mr-3">
+              <i class="fas fa-check"></i>
+            </div>
+            تصميم مخصص وهوية فريدة لكافيهك
+          </li>
+          <li class="flex items-center justify-end">
+            <div class="w-8 h-8 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light mr-3">
+              <i class="fas fa-check"></i>
+            </div>
+            منيو أونلاين جذاب ومتفاعل مع الصور والأسعار
+          </li>
+          <li class="flex items-center justify-end">
+            <div class="w-8 h-8 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light mr-3">
+              <i class="fas fa-check"></i>
+            </div>
+            زر طلب مباشر (واتساب – توصيل) لتسهيل الشراء
+          </li>
+          <li class="flex items-center justify-end">
+            <div class="w-8 h-8 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light mr-3">
+              <i class="fas fa-check"></i>
+            </div>
+            ربط احترافي لحساب إنستجرام + جوجل ماب
+          </li>
+          <li class="flex items-center justify-end">
+            <div class="w-8 h-8 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light mr-3">
+              <i class="fas fa-check"></i>
+            </div>
+            متجاوب مع الموبايل 100% ليظهر على أي شاشة
+          </li>
+          <li class="flex items-center justify-end">
+            <div class="w-8 h-8 rounded-full bg-accent-light/10 flex items-center justify-center text-accent-light mr-3">
+              <i class="fas fa-check"></i>
+            </div>
+            تسليم سريع خلال 3 أيام عمل فقط!
+          </li>
+        </ul>
+      </div>
+      <p class="font-bold mb-8 text-highlight text-lg">
+        *العرض متاح لأول 5 كافيهات فقط – **احجز مكانك الآن قبل فوات الأوان!**
+      </p>
+      <a href="https://wa.me/201010361316" target="_blank" rel="noopener"
+         class="btn-primary">
+        <i class="fas fa-gift ml-2"></i> احجز العرض الآن
+      </a>
+    </div>
+  </section>
+
+  <section id="features" class="max-w-6xl mx-auto py-20 px-6">
+    <h2 class="section-title text-3xl md:text-4xl font-extrabold text-center text-primary-dark">🎯 مميزات الموقع التي ستبهر عملاءك</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-elegant card-shadow card-hover-effect">
+        <div class="feature-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3 class="font-bold text-2xl mb-3 text-primary-dark">تصميم عصري مميز</h3>
+        <p class="text-gray-700 leading-relaxed">واجهة جذابة وفريدة تعكس هوية كافيهك الراقية وتجذب الزبائن الجدد.</p>
+      </div>
+      <div class="bg-white p-8 rounded-elegant card-shadow card-hover-effect">
+        <div class="feature-icon">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <h3 class="font-bold text-2xl mb-3 text-primary-dark">منيو أونلاين متفاعل</h3>
+        <p class="text-gray-700 leading-relaxed">اعرض أصنافك بأسلوب شهي مع صور عالية الجودة وأسعار واضحة لتجربة تصفح لا تُنسى.</p>
+      </div>
+      <div class="bg-white p-8 rounded-elegant card-shadow card-hover-effect">
+        <div class="feature-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3 class="font-bold text-2xl mb-3 text-primary-dark">واتساب للطلب المباشر</h3>
+        <p class="text-gray-700 leading-relaxed">اجعل عملية الطلب سهلة وسريعة بضغطة زر، مما يزيد من مبيعاتك وتفاعل العملاء.</p>
+      </div>
+      <div class="bg-white p-8 rounded-elegant card-shadow card-hover-effect">
+        <div class="feature-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3 class="font-bold text-2xl mb-3 text-primary-dark">تحسين للظهور في جوجل</h3>
+        <p class="text-gray-700 leading-relaxed">موقعك سيكون مهيئاً للظهور في نتائج البحث، ليجدك العملاء بسهولة عند البحث عن كافيهات قريبة.</p>
+      </div>
+      <div class="bg-white p-8 rounded-elegant card-shadow card-hover-effect">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3 class="font-bold text-2xl mb-3 text-primary-dark">سريع وخفيف الأداء</h3>
+        <p class="text-gray-700 leading-relaxed">تصميم يضمن سرعة تحميل فائقة، مما يوفر تجربة استخدام ممتازة من أول زيارة.</p>
+      </div>
+      <div class="bg-white p-8 rounded-elegant card-shadow card-hover-effect">
+        <div class="feature-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3 class="font-bold text-2xl mb-3 text-primary-dark">دعم فني لمدة شهر</h3>
+        <p class="text-gray-700 leading-relaxed">لا تقلق بعد التسليم! نقدم لك دعمًا فنيًا مجانيًا لمدة شهر كامل لضمان سلاسة العمل.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="bg-gradient-to-br from-purple-50 to-primary-light py-20 px-6 overflow-hidden">
+    <h2 class="section-title text-3xl md:text-4xl font-extrabold text-center text-primary-dark">❤️ آراء بعض عملائنا: ثقة تدوم</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-elegant testimonial-card card-shadow">
+        <p class="text-lg text-gray-800 leading-relaxed mb-6">
+          “ما توقعت الموقع يفرق بالشكل ده! الزباين بقوا يسألوني عن الأصناف من اللينك اللي بعتّه.
+          فعلاً خدمة ممتازة وسريعة، أنصح الكل بيها.”
+        </p>
+        <div class="flex items-center">
+          <div class="w-12 h-12 rounded-full bg-gray-200 border-2 border-accent-light flex items-center justify-center text-accent-light mr-3">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <p class="font-bold text-gray-800">مالك كافيه "فنجان السعادة"</p>
+            <p class="text-gray-600 text-sm">جدة</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 rounded-elegant testimonial-card card-shadow">
+        <p class="text-lg text-gray-800 leading-relaxed mb-6">
+          “المنيو أونلاين وفر عليا طباعة وتكاليف كتير، وكمان بيوصل للعملاء وهم في البيت قبل ما يجوا الكافيه.
+          احترافية في التعامل وسرعة في الإنجاز.”
+        </p>
+        <div class="flex items-center">
+          <div class="w-12 h-12 rounded-full bg-gray-200 border-2 border-accent-light flex items-center justify-center text-accent-light mr-3">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <p class="font-bold text-gray-800">كافيه "نكهة الأصالة"</p>
+            <p class="text-gray-600 text-sm">الرياض</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 rounded-elegant testimonial-card card-shadow">
+        <p class="text-lg text-gray-800 leading-relaxed mb-6">
+          “بصراحة، الموقع عمل فارق كبير في ظهورنا على جوجل. بقينا بنجذب زبائن جدد يومياً.
+          فريق Neblix محترف ومبدع، شكرًا جزيلاً لهم.”
+        </p>
+        <div class="flex items-center">
+          <div class="w-12 h-12 rounded-full bg-gray-200 border-2 border-accent-light flex items-center justify-center text-accent-light mr-3">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <p class="font-bold text-gray-800">إدارة كافيه "الركن الهادئ"</p>
+            <p class="text-gray-600 text-sm">الدمام</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-8 rounded-elegant testimonial-card card-shadow">
+        <p class="text-lg text-gray-800 leading-relaxed mb-6">
+          “من أفضل القرارات اللي اتخذتها لمشروعي، الموقع بيعكس الجودة والفخامة اللي بنقدمها.
+          العملاء بقت عندهم ثقة أكبر فينا لما شافوا الموقع.”
+        </p>
+        <div class="flex items-center">
+          <div class="w-12 h-12 rounded-full bg-gray-200 border-2 border-accent-light flex items-center justify-center text-accent-light mr-3">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <p class="font-bold text-gray-800">كافيه "قهوة الصباح"</p>
+            <p class="text-gray-600 text-sm">الخبر</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="max-w-4xl mx-auto py-20 px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-primary-dark">هل كافيهك هو التالي ليضيء على الإنترنت؟</h2>
+    <p class="mb-10 text-xl text-gray-700 max-w-2xl mx-auto">
+      لا تدع الفرصة تفوتك! ابدأ رحلة التميز الرقمي لكافيهك الآن مع فريق <span class="font-extrabold gradient-text">Neblix</span>.
+    </p>
+    <a href="https://wa.me/201010361316" target="_blank" rel="noopener"
+       class="btn-primary">
+      <i class="fab fa-whatsapp ml-2"></i> تحدث معنا عبر واتساب الآن
+    </a>
+  </section>
+
+  <section id="faq" class="bg-white py-20 px-6 max-w-4xl mx-auto rounded-elegant card-shadow">
+    <h2 class="section-title text-3xl md:text-4xl font-extrabold text-center text-primary-dark">👇 أسئلة شائعة (FAQ)</h2>
+    <div class="space-y-6 mt-12">
+      <div class="border-b border-gray-200 pb-6">
+        <h3 class="flex items-center text-xl md:text-2xl font-bold text-primary-dark mb-3">
+          <i class="fas fa-clock text-accent-light mr-3"></i> خلال قد إيه بتسلموا الموقع؟
+        </h3>
+        <p class="text-gray-700 leading-relaxed pl-9">نعدك بتسليم موقعك الاحترافي خلال <span class="font-bold text-accent-light">3 أيام عمل فقط</span> من تاريخ الاتفاق وبدء المشروع.</p>
+      </div>
+      <div class="border-b border-gray-200 pb-6">
+        <h3 class="flex items-center text-xl md:text-2xl font-bold text-primary-dark mb-3">
+          <i class="fas fa-mobile-alt text-accent-light mr-3"></i> هل الموقع يشتغل على الجوال وكل الأجهزة؟
+        </h3>
+        <p class="text-gray-700 leading-relaxed pl-9">أكيد! تصميم الموقع <span class="font-bold text-accent-light">متجاوب 100%</span> مع جميع الشاشات والأجهزة (جوال، تابلت، حاسوب)، ليظهر بأفضل شكل.</p>
+      </div>
+      <div class="border-b border-gray-200 pb-6">
+        <h3 class="flex items-center text-xl md:text-2xl font-bold text-primary-dark mb-3">
+          <i class="fas fa-edit text-accent-light mr-3"></i> هل أقدر أعدل على الموقع بعدين؟
+        </h3>
+        <p class="text-gray-700 leading-relaxed pl-9">طبعًا، نوفر لك شرحًا مبسطًا لكيفية تعديل بعض الأقسام بنفسك، أو يمكنك التواصل معنا ونقوم بالتعديلات اللازمة لك.</p>
+      </div>
+      <div class="pb-6">
+        <h3 class="flex items-center text-xl md:text-2xl font-bold text-primary-dark mb-3">
+          <i class="fas fa-credit-card text-accent-light mr-3"></i> الدفع بيكون ازاي؟
+        </h3>
+        <p class="text-gray-700 leading-relaxed pl-9">نوفر طرق دفع مرنة تناسبك، مثل التحويل البنكي، STC Pay، أو أي وسيلة دفع إلكترونية أخرى متوفرة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-16 px-6 gradient-bg text-white font-bold overflow-hidden">
+    <div class="max-w-3xl mx-auto">
+      <p class="mb-6 text-2xl md:text-3xl leading-relaxed">
+        <i class="fas fa-quote-left text-white/30 mr-2"></i> 
+        لو كافيهك يستحق إنه يظهر بشكل احترافي ويترك انطباعًا لا يُنسى، 
+        <span class="font-extrabold">احنا هنا علشان نساعدك</span> 👌
+      </p>
+      <a href="https://wa.me/201010361316" target="_blank" rel="noopener"
+         class="inline-block bg-white text-accent-light px-12 py-4 rounded-full font-bold hover:bg-gray-100 transition-all-ease shadow-lg hover:shadow-xl transform hover:scale-105">
+        <i class="fab fa-whatsapp ml-2"></i> احجز مكانك الآن عبر واتساب!
+      </a>
+    </div>
+  </section>
+
+  <footer class="text-center py-12 px-6 bg-primary-dark text-primary-light">
+    <div class="max-w-6xl mx-auto">
+      <a href="#hero" class="text-3xl font-extrabold gradient-text mb-6 inline-block">Neblix</a>
+      <div class="flex justify-center space-x-8 mb-8">
+        <a href="#example" class="text-primary-light hover:text-white transition-colors">مثال مباشر</a>
+        <a href="#offer" class="text-primary-light hover:text-white transition-colors">العرض المحدود</a>
+        <a href="#features" class="text-primary-light hover:text-white transition-colors">المميزات</a>
+        <a href="#testimonials" class="text-primary-light hover:text-white transition-colors">آراء العملاء</a>
+        <a href="#faq" class="text-primary-light hover:text-white transition-colors">أسئلة شائعة</a>
+      </div>
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="https://wa.me/201010361316" class="w-12 h-12 rounded-full bg-accent-light flex items-center justify-center text-white hover:bg-accent-dark transition-colors">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="w-12 h-12 rounded-full bg-accent-light flex items-center justify-center text-white hover:bg-accent-dark transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="w-12 h-12 rounded-full bg-accent-light flex items-center justify-center text-white hover:bg-accent-dark transition-colors">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <p>Neblix © <span id="current-year"></span> - جميع الحقوق محفوظة.</p>
+    </div>
+    
+    <script>
+      // تحديث السنة الحالية تلقائياً
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // إضافة تأثيرات التمرير
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    </script>
+  </footer>
+
+</body>
+</html>
